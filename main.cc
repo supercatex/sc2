@@ -3,8 +3,10 @@
 
 using namespace sc2;
 
+//自訂義Bot
 class CustomBot : public Agent {};
 
+//主程序
 int main(int argc, char* argv[]) {
 
     //遊戲協調員
@@ -16,12 +18,12 @@ int main(int argc, char* argv[]) {
     //遊戲視窗起始位置.
     coordinator.SetWindowLocation(450, 200);
 
-    //自訂義Bot.
+    //自訂義Bot
     CustomBot bot;
     //設置參與玩家
     coordinator.SetParticipants({
         //Terran: 人族, Zerg: 蟲族, Protoss: 神族, Random: 隨機.
-        CreateParticipant(Race::Random, &bot),
+        CreateParticipant(Race::Terran, &bot),
         CreateComputer(Race::Random, Difficulty::HardVeryHard)
     });
 
