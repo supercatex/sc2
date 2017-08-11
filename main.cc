@@ -13,16 +13,16 @@ int main(int argc, char* argv[]) {
     Coordinator coordinator;
     coordinator.LoadSettings(argc, argv);
 
-    //true: 正常速度, false: 超快進程.
+    //true: 正常速度, false: 超快進程
     coordinator.SetRealtime(true);
-    //遊戲視窗起始位置.
+    //遊戲視窗起始位置
     coordinator.SetWindowLocation(450, 200);
 
     //自訂義Bot
     CustomBot bot;
     //設置參與玩家
     coordinator.SetParticipants({
-        //Terran: 人族, Zerg: 蟲族, Protoss: 神族, Random: 隨機.
+        //Terran: 人族, Zerg: 蟲族, Protoss: 神族, Random: 隨機
         CreateParticipant(Race::Terran, &bot),
         CreateComputer(Race::Random, Difficulty::HardVeryHard)
     });
