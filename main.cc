@@ -1,10 +1,8 @@
 #include <sc2api\sc2_api.h>
 #include <iostream>
+#include "CustomBot.cc"
 
 using namespace sc2;
-
-//自訂義Bot
-class CustomBot : public Agent {};
 
 //主程序
 int main(int argc, char* argv[]) {
